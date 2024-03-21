@@ -26,11 +26,8 @@ class Program
 
         // Start the bot.
         await botService.StartAsync();
-        logger.LogInformation("Бот запущен. Нажмите Enter для завершения работы...");
-
-        // Wait for Enter to stop the bot.
-        Console.ReadLine();
-
+        logger.LogInformation("Бот запущен.");
+        
         // Stop the bot.
         await botService.StopAsync();
         logger.LogInformation("Бот остановлен.");
