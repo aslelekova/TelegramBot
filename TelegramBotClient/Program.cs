@@ -23,13 +23,18 @@ class Program
         // Initialize the bot service with the logger and token.
         var botService = new BotService(logger, botToken);
 
-
         // Start the bot.
         await botService.StartAsync();
         logger.LogInformation("Бот запущен.");
-        
+
         // Stop the bot.
         await botService.StopAsync();
         logger.LogInformation("Бот остановлен.");
     }
 }
+
+/*
+ * Note: при совершении каких-либо действий (сортировки/фильтрации) данные в файле обновляются в реальном времени,
+ * поэтому сообщение "У вас нет данных для обработки. Пожалуйста, загрузите файл формата csv или json." означает, что
+ * посредством ранее совершенных действий в файле ничего не осталось => требуется загрузить новый.
+ */ 
