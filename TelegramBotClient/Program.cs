@@ -26,6 +26,12 @@ class Program
         // Start the bot.
         await botService.StartAsync();
         logger.LogInformation("Бот запущен.");
+
+        Console.ReadLine();
+        
+        // Stop the bot.
+        await botService.StopAsync();
+        logger.LogInformation("Бот остановлен.");
     }
 }
 
